@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 '''
 Author:Ranran
 Date:2017.09.01
@@ -8,7 +10,6 @@ Return the information in /proc/CPUinfo
     使用 Python 脚本实现对CPU（中央处理器）监测
 '''
 
-#!/usr/bin/python3
 from __future__ import print_function
 from collections import OrderedDict
 import pprint
