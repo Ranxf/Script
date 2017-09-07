@@ -1,6 +1,10 @@
 '''
 Author:Ranran
 Date:2017.09.01
+Return the information in /proc/CPUinfo
+    as a dictionary in the following format:
+    CPU_info['proc0']={...}
+    CPU_info['proc1']={...}
 '''
 
 #!/usr/bin/python3
@@ -10,12 +14,6 @@ import pprint
 
 
 def CPUinfo():
-    ''' Return the information in /proc/CPUinfo
-    as a dictionary in the following format:
-    CPU_info['proc0']={...}
-    CPU_info['proc1']={...}
-    '''
-
     CPUinfo = OrderedDict()
     procinfo = OrderedDict()
 
