@@ -5,6 +5,7 @@ Return the information in /proc/CPUinfo
     as a dictionary in the following format:
     CPU_info['proc0']={...}
     CPU_info['proc1']={...}
+    使用 Python 脚本实现对CPU（中央处理器）监测
 '''
 
 #!/usr/bin/python3
