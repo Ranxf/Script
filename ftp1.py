@@ -1,5 +1,5 @@
 from ftplib import FTP
-import os
+# import os
 
 def ftpconnect(host, username, password):
     ftp = FTP()
