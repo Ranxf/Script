@@ -1,4 +1,8 @@
 from ftplib import FTP
+import time
+
+num = 0
+count = 0
 
 
 def ftpconnect(host, username, password):
@@ -28,5 +32,15 @@ def uploadfile(ftp, localpath, remotepath):
 
 if __name__ == "__main__":
     ftp = ftpconnect("192.168.2.200", "admin", "admin")
-    uploadfile(ftp, "/home/rxf/other/PlatServerTest/2.jpg", "51010000491320000001/2.jpg")
+    start_tick = time.time()
+    # for n in range(11):
+    while True:
+        file_name = '51010000491320000001/' + str(num) + '.jpg'
+        num = num + 1
+        uploadfile(ftp, "/home/rxf/other/PlatServerTest/2.jpg", file_name)
+        end_tick = time.time()
+        count = count + 1
+        if (end_tick - start_tick) > 1.0:
+            break
+    print('count=', count)
     ftp.quit()
