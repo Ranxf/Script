@@ -1,5 +1,6 @@
 from ftplib import FTP
 import time
+import threading
 
 num = 0
 count = 0
@@ -33,6 +34,13 @@ def uploadfile(ftp, localpath, remotepath):
 if __name__ == "__main__":
     ftp = ftpconnect("192.168.2.200", "admin", "admin")
     start_tick = time.time()
+
+    threads = []
+    t1 = threading.Thread(target=uploadfile,)
+    threads.append(t1)
+    t2 = threading.Thread()
+    threads.append(t2)
+
     # for n in range(11):
     while True:
         file_name = '51010000491320000001/' + str(num) + '.jpg'
